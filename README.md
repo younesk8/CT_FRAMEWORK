@@ -1,51 +1,58 @@
-#H1 Question 7
-crier le projet avec les depandances
+> projet réalisrer par : </br>
+    <u> KHALFI Younes (MAIGE) </br>
+     AFEILAL Hicham (MAIGE) </br>
+    MOULOUDE Amine (MAIGE) </br>
+     BELKADI Imed  (INGÉ) </u>
 
-> symfony new project-name
+
+# Question 7
+#####créer le projet avec les dépandances
+
+> symfony new project-name </br>
 > composer require symfony/orm-pack
 
-create the sqlite database
-> php bin/console doctrine:database:create
-crier l'entite annonce
-> php bin/console make:entity
-generer une migration pour crier la table annonce
-> php bin/console make:migration
-lancer la migration
+####créer la base de donnée
+> php bin/console doctrine:database:create </br>
+créer l'entite annonce</br>
+> php bin/console make:entity</br>
+generer une migration pour créer la table annonce</br>
+> php bin/console make:migration</br>
+#####lancer la migration
 > php bin/console doctrine:migrations:migrate
 
-#H1 Question 9
-> crier une entite avec une relation OneToMany avec l'entite Annonce
-> 
+# Question 9
+> créer une entite avec une relation OneToMany avec l'entite Annonce
+
 > modifer lees methodes de CRUD de l'annonce
-generer une migration pour crier la table categoy
+####generer une migration pour créer la table categoy
 > php bin/console make:migration
-lancer la migration
+####lancer la migration
 > php bin/console doctrine:migrations:migrate
 
-#H1 les endpoints
-list tout les annonces
+#les endpoints
+####list tout les annonces
 > http://127.0.0.1:8000/annonce/annonces  POST
 
-ajouter une annonce
+####ajouter une annonce
 > http://127.0.0.1:8000/annonce/add    POST
 
-supprimer une annonce en specifiant l'id de l'annonce
+####supprimer une annonce en specifiant l'id de l'annonce
 > http://127.0.0.1:8000/annonce/delete/id     DELETE
 
-modifier une annonce en specifiant l'id de l'annonce
+####modifier une annonce en specifiant l'id de l'annonce
 > http://127.0.0.1:8000/annonce/update/6   PUT
 
-list tout des categories
+####list tout des categories
 > http://127.0.0.1:8000/category/categories   GET
 
-ajouter une category
+####ajouter une categorie
 > http://127.0.0.1:8000/category/add    POST
 
-list tout les annonces d'une category en specifinat l'id de la category
+####list tout les annonces d'une category en specifinat l'id de la category
 > http://127.0.0.1:8000/annonce/annoncebycategory/2    GET
 
-se connecter 
+####se connecter 
 > http://127.0.0.1:8000/user/login    POST
 
-crier un compte 
+####créer un compte 
 > http://127.0.0.1:8000/user/add    POST
